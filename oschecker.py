@@ -12,8 +12,8 @@ print ('Terse  :', platform.platform(terse=True))
 
 
 if "Windows" in platform.platform():
-    print("This is a Windows System")
+    print("Windows System")
 elif "redhat" in platform.platform():
-    print("This is an Redhat System")
+    print("Redhat System")
 elif "ubuntu" in platform.platform():
-    print("This is an Ubuntu system")
+    print("Ubuntu system")

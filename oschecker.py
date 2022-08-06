@@ -21,8 +21,8 @@ elif "redhat" in platform.platform():
     os.system("sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key")
     os.system("sudo yum upgrade")
     # Add required dependencies for the jenkins package
-    os.system("sudo yum install java-11-openjdk")
-    os.system("sudo yum install jenkins")
+    os.system("sudo yum install -y java-11-openjdk")
+    os.system("sudo yum install -y jenkins")
     os.system("sudo systemctl daemon-reload")
     
 elif "ubuntu" in platform.platform():
@@ -32,5 +32,5 @@ elif "ubuntu" in platform.platform():
     os.system("echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null")
-    os.system("sudo apt-get update")
-    os.system("sudo apt-get install jenkins")
+    os.system("sudo apt-get update -y")
+    os.system("sudo apt-get install -y jenkins")
